@@ -2,9 +2,10 @@ body {
     height: 100%;
     margin: 0 auto;
     overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#container {
+#grid-container {
     height: 100%;
 }
 
@@ -16,10 +17,10 @@ body {
     grid-template-columns: repeat(15, 1fr);
     /* 3 rows */
     grid-template-rows: 28.3px 28.3px 28.3px;
-    grid-template-areas: 
-    ". . . . logo . . . emailLabel passwordLabel . ."
-    ". . . . logo . . . email password loginBtn ."
-    ". . . . logo . . . keep forgot . .";
+    grid-template-areas:
+        ". . . . logo . . . emailLabel passwordLabel . ."
+        ". . . . logo . . . email password loginBtn ."
+        ". . . . logo . . . keep forgot . .";
 }
 
 #logo {
@@ -102,4 +103,211 @@ body {
     padding: 0;
     align-self: end;
     font-size: 12px;
+}
+
+/* MAIN */
+#main {
+    display: grid;
+    background-color: rgb(233, 238, 243);
+    padding-right: 200px;
+}
+
+/* MAIN LEFT */
+#mainLeft {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-auto-rows: 65px;
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#topText {
+    grid-area: topText;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    margin-top: 40px;
+}
+
+#firstText {
+    grid-area: firstText;
+    grid-column: 2 / span 2;
+    grid-row: 3;
+    font-size: 20px;
+    padding-left: 35px;
+    grid-template-rows: auto;
+    align-self: center;
+}
+
+#secondText {
+    grid-area: secondText;
+    grid-column: 2 / span 2;
+    grid-row: 4;
+    font-size: 20px;
+    padding-left: 35px;
+    align-self: center;
+}
+
+#thirdText {
+    grid-area: secondText;
+    grid-column: 2 / span 2;
+    grid-row: 5;
+    font-size: 20px;
+    padding-left: 35px;
+    align-self: center;
+}
+
+/* MAIN RIGHT */
+
+#mainRight {
+    display: grid;
+    grid-auto-rows: 45px;
+    margin-top: 5px;
+    grid-column-start: 3;
+    grid-row-gap: 7px;
+}
+
+#signup {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+    margin-top: 10px;
+    grid-auto-rows: 70px;
+}
+
+#signupSub {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    grid-row: 2;
+    grid-auto-rows: 70px;
+}
+
+#firstName {
+    grid-area: firstName;
+    grid-row: 3;
+    grid-column: 1;
+}
+
+#lastName {
+    grid-area: lastName;
+    grid-column: 2;
+    grid-row: 3;
+    margin-left: 5px;
+    grid-row-gap: 0px;
+}
+
+#mobile {
+    grid-area: mobile;
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    grid-auto-rows: max-content;
+}
+
+#re-enter {
+    grid-area: reenter;
+    grid-column: 1 / span 2;
+    grid-row: 5;
+    grid-auto-rows: max-content;
+}
+
+#newPassword {
+    grid-area: newPassword;
+    grid-column: 1 / span 2;
+    grid-row: 6;
+    grid-auto-rows: max-content;
+}
+
+#bday {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    grid-row: 7;
+    grid-column: 1;
+    grid-row-gap: 3px;
+}
+
+.btnGroup {
+    grid-row: 8;
+    grid-column: 1;
+    grid-row-gap: 3px;
+}
+
+#day {
+    grid-row: 8;
+    grid-column: 1;
+    background-color: lightgrey;
+    font-size: 12px;
+    width: 47px;
+    height: 18px;
+}
+
+#year {
+    grid-row: 8;
+    background-color: lightgrey;
+    font-size: 12px;
+    width: 55px;
+    height: 18px;
+    padding-left: 2px;
+}
+
+#month {
+    grid-row: 8;
+    background-color: lightgrey;
+    font-size: 12px;
+    width: 55x;
+    height: 18px;
+    padding-left: 2px;
+}
+
+#why {
+    font-size: 10px;
+    color: #0000ff;
+    grid-row: 8;
+    margin-top: 0;
+}
+
+#radio {
+    grid-row: 9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    grid-row-gap: 3px;
+}
+
+#agree {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    grid-row: 10;
+    grid-row-gap: 3px;
+    margin-top: 0;
+}
+
+#signupButton {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(42, 126, 126);
+    grid-row: 11;
+    width: 150px;
+    border-radius: 15px 15px;
+}
+
+#horiz {
+    grid-row: 12;
+    color: teal;
+    grid-column: span 2;
+    margin: 0px;
+    padding: 0px;
+    grid-auto-rows: 1px;
+}
+
+#lastText {
+    grid-row: 13;
+    font-size: 10px;
+    grid-column: span 2;
+    margin-top: 0px;
+    grid-row-gap: 1px;
+    grid-auto-rows: 1px;
 }
